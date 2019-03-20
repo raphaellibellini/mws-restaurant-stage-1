@@ -5,7 +5,7 @@ var newMap
 var markers = []
 
 // registering worker
-registerServiceWorker = () => {
+_registerServiceWorker = () => {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -19,7 +19,7 @@ registerServiceWorker = () => {
   }
 }
 
-registerServiceWorker();
+_registerServiceWorker();
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
